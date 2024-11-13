@@ -1,45 +1,38 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
 
-module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
+export default {
+  mode: "development",
+  entry: "./src/index.js",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // Ensure .jsx files are handled
+        test: /\.(js|jsx|mjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: [
-              '@babel/preset-env', // ES6+ support
-              '@babel/preset-react', // React support
-            ],
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
         },
       },
       {
-        test: /\.sass$/, // Handle SASS files
-        use: [
-          'style-loader',  // Inject CSS into the DOM
-          'css-loader',    // Resolve CSS imports
-          'sass-loader',   // Compile SASS to CSS
-        ],
+        test: /\.sass$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Resolve both .js and .jsx extensions
+    extensions: [".js", ".jsx"], // Resolve both .js and .jsx extensions
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Ensure this is correctly set
+      template: "./public/index.html", // Ensure this is correctly set
     }),
     new CleanWebpackPlugin(),
   ],

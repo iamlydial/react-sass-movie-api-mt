@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="app-container">
         test
-      <h1>Hello, React with SASS (using .sass files)!</h1>
+      <h1>Hello, fff React with SASS (using .sass files)!</h1>
     </div>
   );
 };
