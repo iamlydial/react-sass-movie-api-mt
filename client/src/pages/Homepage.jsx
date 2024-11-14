@@ -36,10 +36,25 @@ const Homepage = () => {
 
   return (
     <div className="home-page">
+      <h1>CineScout</h1>
+      <h2>Your Guide to the Best Movies, Anytime, Anywhere.</h2>
+      
       <div className="carousel-section">
-        <Carousel title="Popular Movies" items={popularMovies} />
-        <Carousel title="Top Rated Movies" items={topRatedMovies} />
-        <Carousel title="Upcoming Movies" items={upcomingMovies} />
+        <Carousel
+          className="carousel"
+          title="Popular Movies"
+          items={popularMovies}
+        />
+        <Carousel
+          className="carousel"
+          title="Top Rated Movies"
+          items={topRatedMovies}
+        />
+        <Carousel
+          className="carousel"
+          title="Upcoming Movies"
+          items={upcomingMovies}
+        />
       </div>
     </div>
   );
