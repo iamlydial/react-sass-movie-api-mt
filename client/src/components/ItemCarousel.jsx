@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ItemCarousel = ({ key, item }) => {
+const ItemCarousel = ({ item }) => {
+  console.log("Navigating to movie ID:", item.id);
   return (
     <div className="item-card">
       <Link to={`/detail/${item.id}`}>
