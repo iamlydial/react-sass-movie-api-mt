@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles.sass";
+import './styles/styles.sass';
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage.jsx";

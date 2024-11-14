@@ -35,11 +35,12 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div>
-      Homepage
-      <Carousel title="Popular Movies" items={popularMovies} />
-      <Carousel title="Top Rated Movies" items={topRatedMovies} />
-      <Carousel title="Upcoming Movies" items={upcomingMovies} />
+    <div className="home-page">
+      <div className="carousel-section">
+        <Carousel title="Popular Movies" items={popularMovies} />
+        <Carousel title="Top Rated Movies" items={topRatedMovies} />
+        <Carousel title="Upcoming Movies" items={upcomingMovies} />
+      </div>
     </div>
   );
 };
