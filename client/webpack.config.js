@@ -2,9 +2,13 @@ import path from "path";
 import { fileURLToPath } from "url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import dotenv from "dotenv";
+import webpack from "webpack";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+dotenv.config();
 
 export default {
   mode: "development",
@@ -32,12 +36,15 @@ export default {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"], // Resolve both .js and .jsx extensions
+    extensions: [".js", ".jsx"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // Ensure this is correctly set
+      template: "./public/index.html",
     }),
     new CleanWebpackPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ],
 };
