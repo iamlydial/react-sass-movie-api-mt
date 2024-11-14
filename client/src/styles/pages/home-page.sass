@@ -1,23 +1,31 @@
+@use '../base/_variables.sass' as *
+
 .home-page
   display: flex
   flex-direction: column
   gap: 2rem
   padding: 3rem
+  background-color: $primary-dark-bg 
 
-  h2
+  h1
     font-size: 2rem
     margin-bottom: 10px
+    color: $primary-text
 
   h2
     font-size: 1.5rem
     margin-bottom: 10px
+    color: $primary-text
 
   .carousel-section
     display: flex
     flex-direction: column
-    border: 2px solid
+    background-color: rgba($primary-accent, 0.1)
+    border-radius: 30px
     padding: 2rem
     gap: 2rem
+    .carousel-item
+      display: inline-block
 
 
 

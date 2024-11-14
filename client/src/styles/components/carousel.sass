@@ -1,0 +1,24 @@
+@use '../base/_variables.sass' as *
+
+.carousel
+    display: flex
+    flex-direction: column
+    overflow-y: auto
+    gap: 1rem
+    border-radius: 30px
+    padding: 2rem
+
+
+    .carousel-items
+        display: flex
+        flex-direction: row
+        scroll-snap-align: start
+        gap:1rem
+
+        .item-card
+            width: 200px
+            height: 380px
+            background-color: rgba($secondary-accent, 0.1)
+            border-radius: 8px
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+            flex-shrink: 0
