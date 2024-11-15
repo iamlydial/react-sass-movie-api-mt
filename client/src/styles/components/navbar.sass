@@ -1,0 +1,33 @@
+@use 'sass:color'
+@use '../base/_variables.sass' as variables
+
+$primary-dark-bg: variables.$primary-dark-bg
+$primary-accent: variables.$primary-accent
+    
+nav
+    display: inline-flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px
+    background-color: color.change($primary-dark-bg, $alpha: 0.9)
+    width: 100%
+    position: sticky
+    top: 0
+    box-shadow: 0 4px 2px -2px $primary-accent
+
+    h1
+        color: $primary-accent
+        font-size: 1.5rem
+        margin-left: 20px
+
+    ul
+        display: inline-flex
+        list-style-type: none
+        li
+            margin-right: 20px
+            a
+                text-decoration: none
+                color: white
+                font-size: 1.2rem
+                &:hover
+                    color: $primary-accent

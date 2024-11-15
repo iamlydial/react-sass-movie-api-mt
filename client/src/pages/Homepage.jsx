@@ -36,7 +36,6 @@ const Homepage = () => {
 
   return (
     <div className="home-page">
-      <h1>CineScout</h1>
       <h2>Your Guide to the Best Movies, Anytime, Anywhere.</h2>
       
       <div className="carousel-section">
