@@ -1,4 +1,7 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "homepage": "https://iamlydial.github.io/react-sass-api-mt",
   "type": "module",
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
@@ -10,8 +13,10 @@
     "redux": "^5.0.1"
   },
   "scripts": {
-    "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "start": "webpack serve --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -21,6 +26,7 @@
     "babel-loader": "^9.2.1",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
     "react-refresh": "^0.14.2",
     "sass": "^1.80.7",
