@@ -12,7 +12,19 @@ $primary-accent: variables.$primary-accent
   background-color: $primary-dark-bg
   height: 100vh
   padding-top: 100px
+  
+  &.top-rated-movie
+    font-family: 'Arial', sans-serif
+  
+  &.top-rated-movie-info
+    background-color: #d80f0f
 
+  &.popular-movie
+    font-family: 'Georgia', serif
+  
+  &.upcoming-movie
+    font-family: 'Times New Roman', serif
+    
 
   .content
     display: flex
@@ -20,11 +32,10 @@ $primary-accent: variables.$primary-accent
     width: 70%
     align-items: center
     margin-bottom: 20px
-
     border-radius: 30px
+    
     .img-side
       flex: 1
-
       display: flex
       justify-content: center
       width: 50%

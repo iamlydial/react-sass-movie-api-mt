@@ -20,7 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
-          path="/detail/:id"
+          path="/detail/:id/:category"
           element={<DetailPage addToWishlist={addToWishlist} />}
         />
 

@@ -5,30 +5,30 @@ import "../styles/pages/detail-page.sass";
 import { useDispatch } from "react-redux";
 import { addToWishlist } from "../redux/wishlistSlice";
 import { setMoviesInLocalStorage } from "../utils/localStorage";
+
 const DetailPage = () => {
-  const { id } = useParams();
+  const { id, category } = useParams();  
   const [movie, setMovie] = useState(null);
   const dispatch = useDispatch();
-  
+
   const handleAddToWishlist = () => {
-    setMoviesInLocalStorage(movie);
+    setMoviesInLocalStorage(movie); 
+    dispatch(addToWishlist(movie));  
   };
 
   useEffect(() => {
-    fetchMovieById(id)
+    fetchMovieById(id)  
       .then((data) => {
         console.log(data);
-        setMovie(data);
+        setMovie(data);  
       })
       .catch((error) => console.error(error));
   }, [id]);
 
   if (!movie) return <div>Loading...</div>;
 
-  console.log(movie.poster_path, "movie.imageUrl");
-
   return (
-    <div className="detail-page">
+    <div className={`detail-page ${category}-movie`}>  
       <div className="content">
         <div className="img-side">
           {movie.poster_path && (

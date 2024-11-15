@@ -43,16 +43,19 @@ const Homepage = () => {
           className="carousel"
           title="Popular Movies"
           items={popularMovies}
+          category="popular"
         />
         <Carousel
           className="carousel"
           title="Top Rated Movies"
           items={topRatedMovies}
+          category="top-rated"
         />
         <Carousel
           className="carousel"
           title="Upcoming Movies"
           items={upcomingMovies}
+          category="upcoming"
         />
       </div>
     </div>

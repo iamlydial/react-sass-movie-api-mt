@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ItemCarousel = ({ item }) => {
+const ItemCarousel = ({ item, category }) => {
   console.log("Navigating to movie ID:", item.id);
   return (
     <div className="item-card">
-      <Link to={`/detail/${item.id}`}>
+      <Link to={`/detail/${item.id}/${category}`}>
         <img
           src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`}
           alt={item.title}
