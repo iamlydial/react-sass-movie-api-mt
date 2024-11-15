@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import ItemCarousel from "../components/ItemCarousel.jsx";
+import Carousel from "../components/Carousel.jsx";
 
 const WishlistPage = () => {
-  return <div>
-    <h1>Wishlist</h1>
-    <p>Here are the movies you've saved for later. 🍿</p>
-    <div>
-      {/* Display the movies in the wishlist */}
-      
+  const wishlist = useSelector((state) => state.wishlist.wishlist);
+  console.log("Wishlist:", wishlist);
+  const [movies, setMovies] = useState(() => {
+    const movies = localStorage.getItem("movies");
+    return movies ? JSON.parse(movies) : [];
+  });
+
+  console.log("Movies:", movies);
+
+  useEffect(() => {
+    localStorage.setItem("movies", JSON.stringify(movies));
+  }, [movies]);
+
+  if (!movies) {
+    return <div>Loading...</div>;
+  }
+  return (
+    <div className="wishlist-page">
+      {movies.length === 0 ? (
+        <p>Your wishlist is empty.</p>
+      ) : (
+        <ul>
+          <Carousel title="Wishlist" items={movies} />
+        </ul>
+      )}
     </div>
-  </div>;
+  );
 };
 
 export default WishlistPage;

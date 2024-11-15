@@ -2,15 +2,22 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieById } from "../utils/api";
 import "../styles/pages/detail-page.sass";
-
-const DetailPage = ({ addToWishlist }) => {
+import { useDispatch } from "react-redux";
+import { addToWishlist } from "../redux/wishlistSlice";
+import { setMoviesInLocalStorage } from "../utils/localStorage";
+const DetailPage = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
+  const dispatch = useDispatch();
+  
+  const handleAddToWishlist = () => {
+    setMoviesInLocalStorage(movie);
+  };
 
   useEffect(() => {
     fetchMovieById(id)
       .then((data) => {
-        console.log(data); // Log the fetched data
+        console.log(data);
         setMovie(data);
       })
       .catch((error) => console.error(error));
@@ -35,7 +42,7 @@ const DetailPage = ({ addToWishlist }) => {
         <div className="info-side">
           <h1>{movie.title}</h1>
           <p>{movie.overview}</p>
-          <button onClick={() => addToWishlist(movie)}>ADD TO WISHLIST</button>
+          <button onClick={handleAddToWishlist}>ADD TO WISHLIST</button>
         </div>
       </div>
       <div className="additional-info">
