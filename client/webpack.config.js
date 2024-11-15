@@ -17,7 +17,7 @@ export default {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/react-sass-moview-api-mt/",
+    publicPath: "/react-sass-movie-api-mt/",
   },
   module: {
     rules: [
