@@ -1,7 +1,7 @@
 {
-  "name": "your-project-name",
+  "name": "react-sass-movie-api-mt",
   "version": "1.0.0",
-  "homepage": "https://iamlydial.github.io/react-sass-api-mt",
+  "homepage": ".",
   "type": "module",
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
