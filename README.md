@@ -2,10 +2,6 @@
 
 This project is a movie application built with React and Sass, utilizing a movie API to fetch and display movie data. No Create React App (CRA) or boilerplate was used; everything is built from scratch by myself.
 
-<div style="background-color: lightblue; padding: 10px;">
-  This is a section with a light blue background.
-</div>
-
 ## Table of Contents
 
 - [Installation](#installation)
