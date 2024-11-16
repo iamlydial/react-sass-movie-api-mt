@@ -1,4 +1,4 @@
-# React Sass Movie API
+# 🎬 React Sass Movie API 🍿
 
 This project is a movie application built with React and Sass, utilizing a movie API to fetch and display movie data.
 
@@ -35,13 +35,13 @@ This project is a movie application built with React and Sass, utilizing a movie
 
 ## Features
 
-- Fetches movie data from an external API
+- 🎥 Fetches movie data from an external API
 ![Screenshot 2024-11-16 at 11 35 08](https://github.com/user-attachments/assets/83bf1054-74c7-4ac4-a3f4-89643121b529)
 
-- Displays a list of movies with details
+- 📽️ Displays a list of movies with details
 ![Screenshot 2024-11-16 at 11 35 29](https://github.com/user-attachments/assets/12e958e7-70da-4003-85c7-aafcfbeb722c)
 
-- Responsive design using Sass
+- 📱 Responsive design using Sass
 ![Screenshot 2024-11-16 at 11 35 39](https://github.com/user-attachments/assets/70b1c97f-9bd6-4d5b-9818-0b118653e73c)
 
 ## Contributing
