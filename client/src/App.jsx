@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./styles/styles.sass";
 import Navbar from "./components/Navbar.jsx";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage.jsx";
 import DetailPage from "./pages/DetailPage.jsx";
 import WishlistPage from "./pages/WishlistPage.jsx";
+import { BrowserRouter } from "react-router-dom/dist/index.js";
 
 const App = () => {
   console.log("App is rendering");

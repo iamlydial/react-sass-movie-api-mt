@@ -1,19 +1,22 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom/dist";
 
 const Navbar = () => {
   return (
     <nav>
-      <h1><a href='/'>CineScout</a></h1>
+      <h1>
+        <Link to="/">CineScout</Link>
+      </h1>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/wishlist">Wishlist</a>
+          <Link to="/wishlist">Wishlist</Link>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
