@@ -15,9 +15,6 @@ $primary-accent: variables.$primary-accent
   
   &.top-rated-movie
     font-family: 'Arial', sans-serif
-  
-  &.top-rated-movie-info
-    background-color: #d80f0f
 
   &.popular-movie
     font-family: 'Georgia', serif
@@ -57,6 +54,12 @@ $primary-accent: variables.$primary-accent
       padding: 20px
       background-color: white
       border-radius: 30px
+      &.info-side-top-rated-info
+        background-color: #d8d50f
+      &.info-side-popular-info
+        background-color: #d80f92
+      &.info-side-upcoming-info
+        background-color: #0fd88e
 
       h1
         font-size: 2rem
@@ -78,6 +81,12 @@ $primary-accent: variables.$primary-accent
         transition: background-color 0.3s
         border-left: 3px red solid
         font-style: bold
+        &.info-side-button-top-rated-info
+          background-color: #450fd8
+        &.info-side-button-popular-info
+          background-color: #0fd8a3
+        &.info-side-button-upcoming-info
+          background-color: #d80f7d
 
         &:hover
           background-color: color.adjust(#FF6F00, $lightness: 10%)
@@ -88,3 +97,10 @@ $primary-accent: variables.$primary-accent
     border-left: 3px red solid
     padding: 20px
     border-radius: 30px
+    &.additional-info-top-rated-info
+      background-color: #d8d50f
+    &.additional-info-popular-info
+      background-color: #d80f92
+    &.additional-info-upcoming-info
+      background-color: #0fd88e
+
